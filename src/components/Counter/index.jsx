@@ -1,18 +1,18 @@
 import React from 'react';
 import styles from './index.module.scss';
 import SetDate from '../SetDate';
-import StepSet from '../StepSet';
+// import SetWeek from '../SetWeek';
 import SetCount from '../SetCount';
 
-const DaysCounter = () => {
+const Counter = () => {
   return (
     <div className={styles.counterDays}>
-      <h1>Days step Counter</h1>
-      <StepSet />
+      <h1>Days and Weeks Counter</h1>
+      {/* <SetWeek /> */}
       <SetCount />
       <SetDate />
     </div>
   );
 };
 
-export default DaysCounter;
+export default Counter;

@@ -1,11 +1,11 @@
 import './App.css';
 import Layout from './components/Layout';
-import DaysCounter from './components/Counter';
+import Counter from './components/Counter';
 
 function App() {
   return (
     <Layout>
-      <DaysCounter />
+      <Counter />
     </Layout>
   );
 }
