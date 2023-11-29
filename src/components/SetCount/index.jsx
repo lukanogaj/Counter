@@ -1,42 +1,53 @@
 import { useState } from 'react';
 import styles from './index.module.scss';
+import SetDate from '../SetDate';
 // import SetWeek from '../SetWeek';
 
 const SetCount = () => {
-  const [step, setStep] = useState(0);
+  const [count, setCount] = useState(0);
   const [week, setWeek] = useState(0);
 
-  // Function to check if days is seven
+  // Two functions for adding at removing weeks amount
 
-  const weekSet = () => {
-    if (step >= 8) {
-      setWeek(week + 1);
-    }
-  };
-
-  // Increase days
+  // Two functions to add and minus days
   const increase = () => {
-    setStep(step + 1);
+    setCount((count) => count + 1);
+    count > 0 && count % 7 === 0 && setWeek((week) => week + 1);
   };
-  // Decrease Days
+
+  console.log(count % 7);
+  // console.log(count);
   const decrease = () => {
-    setStep(step - 1);
+    setCount((count) => count - 1);
+    count > 0 && count % 7 === 0 && setWeek((week) => week - 1);
   };
-  console.log(step);
 
   // console.log(step);
   return (
     <div className={styles.container}>
-      <div className={styles.week}>Week: {week} </div>
+      <div className={styles.weeks}>
+        <p>Week: {week}</p>
+      </div>
       <div className={styles.buttons}>
-        <button onClick={decrease} className={styles.btn}>
+        <button
+          onClick={() => {
+            decrease();
+          }}
+          className={styles.btn}
+        >
           -
         </button>
-        <p step={step}>Day: {step}</p>
-        <button className={styles.btn} onClick={increase}>
+        <p>Day: {count}</p>
+        <button
+          className={styles.btn}
+          onClick={() => {
+            increase();
+          }}
+        >
           +
         </button>
       </div>
+      <SetDate />
     </div>
   );
 };
