@@ -10,18 +10,19 @@ const SetCount = () => {
   // Two functions for adding at removing weeks amount
 
   // Two functions to add and minus days
-  const increase = () => {
-    setCount((count) => count + 1);
-    count > 0 && count % 7 === 0 && setWeek((week) => week + 1);
+
+  const decrease = () => {
+    setCount((count) => count - 1);
+    count >= 0 && count % 7 === 1 && setWeek((week) => week - 1);
   };
 
   console.log(count % 7);
-  // console.log(count);
-  const decrease = () => {
-    setCount((count) => count - 1);
-    count > 0 && count % 7 === 0 && setWeek((week) => week - 1);
+  const increase = () => {
+    setCount((count) => count + 1);
+    count >= 0 && count % 7 === 0 && setWeek((week) => week + 1);
   };
 
+  console.log(count % 7);
   // console.log(step);
   return (
     <div className={styles.container}>
