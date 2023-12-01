@@ -1,44 +1,54 @@
 .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
   .week {
     text-align: center;
     margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
   }
   .buttons {
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    width: 200px;
+    justify-content: center;
+    margin: auto;
+    padding-top: 20px;
+    width: 60%;
     align-items: center;
-    // height: 200px;
+    text-align: center;
+    // background-color: yellow;
+
     .btn {
-      width: 50px;
+      display: inline-block;
+      width: 80px;
       height: 30px;
       margin: 10px;
+      // background-color: red;
     }
   }
 
   p {
     display: inline-block;
-    white-space: nowrap;
-  }
-
-  .dateParagraph {
-    width: 100%;
-    background-color: yellow;
-    display: inline-block;
-    white-space: nowrap;
-    text-align: center;
     align-items: center;
-    margin-top: 30px;
+    align-content: center;
+    white-space: nowrap;
+    width: 60px;
   }
 
   .weeks {
-    width: 100%;
+    width: 60%;
+    height: 40px;
     display: flex;
     align-content: centre;
+    align-items: center;
     text-align: center;
+    border-radius: 10px;
+    font-size: 22px;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
     margin: auto;
-    background-color: red;
+    background-color: #ffffff;
   }
   p {
     width: 100%;

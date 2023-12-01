@@ -1,6 +1,12 @@
 .setDate {
-  width: 400px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #ffffff;
+  border-radius: 4px;
+  width: 300px;
   height: 50px;
-  background-color: yellow;
   margin-top: 140px;
 }
